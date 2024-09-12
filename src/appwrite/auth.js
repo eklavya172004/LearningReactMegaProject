@@ -8,7 +8,7 @@ export class AuthService{
         constructor(){
             this.client
             .setEndpoint(conf.appwriteURL) // Your API Endpoint
-            .setProject(conf.appwriteProjectId);
+            .setProject(conf.appwriteProjectId);  // Your project endpoint      
             this.account = new Account(this.client);   
         }
 
@@ -21,7 +21,7 @@ export class AuthService{
                         return this.login({email,password});
                 }
                 else{
-                    return userAccount;                    
+                    return userAccount;          
                  }
             }
             catch(error){
@@ -61,3 +61,5 @@ export class AuthService{
 const authService = new AuthService();
 
 export default authService
+
+//account bananaya login logout current user liya kon hai
